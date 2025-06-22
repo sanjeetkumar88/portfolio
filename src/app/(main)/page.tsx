@@ -3,7 +3,6 @@ import Navbar from "@/components/navbar/Navbar";
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-import Hero from "../../../public/hero.png";
 import Button from "@/components/button/Button";
 import TypingText from "@/components/typingtext/TypingText";
 
@@ -31,7 +30,7 @@ function Page() {
           property="og:description"
           content="Explore Sanjeet Kumar's work, background, dashboard, and contact details."
         />
-        <meta property="og:image" content="/hero.png" />
+        <meta property="og:image" content="/sanjeet.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://yourdomain.com" />
 
@@ -45,10 +44,11 @@ function Page() {
           name="twitter:description"
           content="Explore Sanjeet Kumar's work, background, dashboard, and contact details."
         />
-        <meta name="twitter:image" content="/hero.png" />
+        <meta name="twitter:image" content="/sanjeet.png" />
       </Head>
 
       <main className="flex flex-col md:flex-row items-center gap-[100px] px-6 py-12 max-w-screen-xl mx-auto">
+        {/* Left Text Content */}
         <div className="flex-1 flex flex-col gap-[20px]">
           <h1 className="font-extrabold text-[48px] md:text-[72px] bg-gradient-to-b from-[#194c33] to-[#bbb] bg-clip-text text-transparent pb-0">
             Hi, I am
@@ -60,21 +60,26 @@ function Page() {
           <h3 className="font-semibold text-[18px] md:text-[22px]">
             I am a <TypingText words={["Full Stack Developer"]} />
           </h3>
+
           <p className="text-lg md:text-xl text-gray-700">
-            I am a MERN-stack developer with 4ᵗʰ month of experience in building
+            I am a MERN-stack developer with 1 Year of experience in building
             scalable web applications. Skilled in both front-end and back-end
             development, I specialize in the MERN stack and other modern
             technologies to create seamless user experiences and efficient
             solutions.
           </p>
+
           <Button url="/portfolio" text="See Our Works" />
         </div>
 
+        {/* Right: Your Photo */}
         <div className="flex-1 flex justify-center">
           <Image
-            src={Hero}
-            alt="Illustration of digital workspace and development environment"
-            className="rounded-lg shadow-md w-full max-w-[500px] h-[400px] object-cover transition-transform duration-700 transform -translate-y-[15px] hover:translate-y-0"
+            src="/Sanjeet.jpg" 
+            alt="Sanjeet Kumar"
+            width={400}
+            height={400}
+            className="rounded-full shadow-lg shadow-[#63e9a8] w-full max-w-[400px] h-auto transition-transform duration-700 transform -translate-y-[15px] hover:translate-y-0 hover:scale-105 z-10"
           />
         </div>
       </main>
