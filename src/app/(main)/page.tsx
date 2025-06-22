@@ -1,10 +1,13 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import React from "react";
-import Image from "next/image";
 import Head from "next/head";
 import Button from "@/components/button/Button";
 import TypingText from "@/components/typingtext/TypingText";
+import TiltImage from "@/components/tiltimg/TiltImage";
+import About from "@/components/about/About";
+import Contact from "@/components/contact/Contact";
+import Skills from "@/components/skills/Skills";
 
 function Page() {
   return (
@@ -47,7 +50,8 @@ function Page() {
         <meta name="twitter:image" content="/sanjeet.png" />
       </Head>
 
-      <main className="flex flex-col md:flex-row items-center gap-[100px] px-6 py-12 max-w-screen-xl mx-auto">
+      {/* Hero Section */}
+      <main className="flex flex-col md:flex-row items-center gap-[100px]  py-12 max-w-screen-xl mx-auto h-[100vh]">
         {/* Left Text Content */}
         <div className="flex-1 flex flex-col gap-[20px]">
           <h1 className="font-extrabold text-[48px] md:text-[72px] bg-gradient-to-b from-[#194c33] to-[#bbb] bg-clip-text text-transparent pb-0">
@@ -69,20 +73,36 @@ function Page() {
             solutions.
           </p>
 
-          <Button url="/portfolio" text="See Our Works" />
-        </div>
-
-        {/* Right: Your Photo */}
-        <div className="flex-1 flex justify-center">
-          <Image
-            src="/Sanjeet.jpg" 
-            alt="Sanjeet Kumar"
-            width={400}
-            height={400}
-            className="rounded-full shadow-lg shadow-[#63e9a8] w-full max-w-[400px] h-auto transition-transform duration-700 transform -translate-y-[15px] hover:translate-y-0 hover:scale-105 z-10"
+          <Button
+            url="https://drive.google.com/file/d/1o1PMtpGqarRsdlXK4Ni5xxjvwIfilsnW/view?usp=drivesdk"
+            text="Download Resume"
           />
         </div>
+
+        {/* Right: Tilt Image */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <TiltImage src="/Sanjeet.jpg" alt="Sanjeet Kumar" className="z-10" />
+        </div>
       </main>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="about">
+        <h1 className="font-extrabold text-[28px] md:text-[52px] text-center ">
+            About Us
+          </h1>
+        <About />
+      </section>
+
+      <section id="contact">
+        
+        <Contact />
+      </section>
+
+
+      
     </>
   );
 }

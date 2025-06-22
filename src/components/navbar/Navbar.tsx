@@ -5,15 +5,14 @@ import React from 'react'
 const data = [
   { id: 1, title: 'Home', url: '/' },
   { id: 2, title: 'Projects', url: '#projects' },
-  { id: 3, title: 'Education', url: '#education' },
-  { id: 5, title: 'About', url: '#about' },
-  { id: 6, title: 'Contact', url: '#contact' },
+  { id: 5, title: 'About', url: '/about' },
+  { id: 6, title: 'Contact', url: '/contact' },
   { id: 4, title: 'Blog', url: '/blog' },
 ]
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center p-[6px] text-white h-[100px]">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent shadow-md text-white flex justify-between items-center px-6 h-[80px]">
       <div>
         <Link href="/" className="text-lg font-semibold">
           Sanjeet
