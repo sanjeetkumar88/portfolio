@@ -8,6 +8,8 @@ import TiltImage from "@/components/tiltimg/TiltImage";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
 import Skills from "@/components/skills/Skills";
+import Education from "@/components/education/Education";
+import ExperienceSection from "@/components/experience/Experience";
 
 function Page() {
   return (
@@ -84,10 +86,13 @@ function Page() {
           <TiltImage src="/Sanjeet.jpg" alt="Sanjeet Kumar" className="z-10" />
         </div>
       </main>
+      
 
       <section id="skills">
         <Skills />
       </section>
+      <ExperienceSection />
+      <Education />
 
       <section id="about">
         <h1 className="font-extrabold text-[28px] md:text-[52px] text-center ">
